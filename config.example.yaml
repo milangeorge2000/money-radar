@@ -48,3 +48,8 @@ research:
 
 memory:
   db_path: "./data/radar.db"
+
+# Optional semantic recall over past gigs (mem0 + local Qdrant).
+# Off by default; needs `pip install mem0ai qdrant-client`.
+semantic:
+  enabled: false

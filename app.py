@@ -128,3 +128,17 @@ for i, o in enumerate(fresh):
             st.caption("Send it yourself — email/Upwork DM. This tool never auto-sends.")
         if d["sow"]:
             d["sow"] = st.text_area("SOW (edit before sharing)", value=d["sow"], height=300, key=f"sow{i}")
+    with st.expander("🧠 Similar past gigs (semantic memory)"):
+        try:
+            from src.semantic_memory import SemanticMemory, available
+            if cfg.get("semantic", {}).get("enabled") and available():
+                sims = SemanticMemory(cfg).similar(f"{o.title} {o.description[:400]}")
+                if sims:
+                    for s in sims:
+                        st.caption(f"({s['score']:.2f}) {s['text'][:300]}")
+                else:
+                    st.caption("No similar past gigs recalled yet.")
+            else:
+                st.caption("Semantic memory off — enable `semantic.enabled` + `pip install mem0ai qdrant-client`.")
+        except Exception as e:
+            st.caption(f"Semantic memory unavailable: {e}")

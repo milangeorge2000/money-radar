@@ -28,12 +28,21 @@ def scan(cfg) -> list:
     opps = dedup(opps)
     mem = Memory(cfg.get("memory", {}).get("db_path", "./data/radar.db"))
     today = date.today().isoformat()
+    sem = None
+    if cfg.get("semantic", {}).get("enabled"):
+        try:
+            from src.semantic_memory import SemanticMemory, available
+            sem = SemanticMemory(cfg) if available() else None
+        except Exception:
+            sem = None
     for o in opps:
         if bucket(o.age_hours) == "stale":
             continue
         match(o, cfg.get("skills", {}))
         apply_budget(o, cfg.get("rates", {}))
         mem.save(o, today)
+        if sem and o.action == "Apply":
+            sem.remember(o)
     return [o for o in opps if bucket(o.age_hours) != "stale"]
 
 
