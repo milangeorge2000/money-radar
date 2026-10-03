@@ -35,26 +35,31 @@ class SemanticMemory:
             "llm": {"provider": "gemini",
                     "config": {"model": model, "api_key": key}},
             "embedder": {"provider": "gemini",
-                         "config": {"model": "models/text-embedding-004",
+                         "config": {"model": "models/gemini-embedding-001",
+                                    "embedding_dims": 3072,
                                     "api_key": key}},
             "vector_store": {"provider": "qdrant",
-                             "config": {"path": "./data/mem0_qdrant"}},
+                             "config": {"path": "./data/mem0_qdrant",
+                                        "collection_name": "gig_memory",
+                                        "embedding_model_dims": 3072}},
         })
 
     def remember(self, op) -> None:
         try:
+            # infer=False: store the gig verbatim (no LLM fact-extraction drift)
             self._mem.add(
                 f"{op.title} at {op.client or 'unknown client'} [{op.source}]. "
                 f"Budget {op.budget_text or 'unstated'}. Fit {op.fit_pct}%, "
                 f"action {op.action}. Skills: {', '.join(op.skills_required) or 'n/a'}. "
                 f"{op.description[:600]}",
-                user_id="milan", metadata={"opp_id": op.id, "action": op.action})
+                user_id="milan", metadata={"opp_id": op.id, "action": op.action},
+                infer=False)
         except Exception:
             pass
 
     def similar(self, query: str, k: int = 5) -> list[dict]:
         try:
-            res = self._mem.search(query, user_id="milan", limit=k)
+            res = self._mem.search(query, top_k=k, filters={"user_id": "milan"})
             out = res.get("results", []) if isinstance(res, dict) else res
             return [{"text": r.get("memory", ""), "score": r.get("score", 0)}
                     for r in (out or [])]
