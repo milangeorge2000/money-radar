@@ -1,0 +1,9 @@
+#!/bin/bash
+# money-radar start  ->  scan fresh + launch dashboard
+cd "$(dirname "$0")"
+if [ "$1" = "start" ]; then
+  python3 run.py scan
+  streamlit run app.py
+else
+  echo "usage: ./money-radar start"
+fi

@@ -1,0 +1,50 @@
+# Copy to config.yaml and edit. config.yaml is git-ignored (holds real keys).
+profile:
+  full_name: "Milan Varghese George"
+  email: "milanvg6@gmail.com"
+  phone: "+91 7736067870"
+  title: "AI Engineer (Agents, RAG, LLM Evaluation)"
+
+# Skill -> one-line evidence from your real work. Used for fit analysis.
+skills:
+  "LangGraph": "Multi-agent J&J Coscientist platform + Terrabase deep research agent"
+  "MCP": "Integrated 17 MCP microservices; MCP tool/data-source integration"
+  "RAG": "Enterprise RAG (Azure AI Search, Morphik); multimodal RAG +35% retrieval"
+  "SQL agents": "NL-to-SQL analytics agent, Snowflake orchestration, ReAct/ReWOO"
+  "Snowflake": "Snowflake orchestration in analytics agent"
+  "FastAPI": "Production FastAPI backends, async execution"
+  "LLM evaluation": "Rubric + G-Eval/DAG judges, LangFuse trace-to-eval loops"
+  "Observability": "LangSmith + LangFuse traces to benchmark feedback loops"
+  "AI governance": "Defense-in-depth governance: Keycloak, RBAC, sandbox isolation"
+  "Python": "Daily driver, 6+ yrs incl. asyncio, distributed workflows"
+  "Vector DBs": "Pinecone, Qdrant, Weaviate, Azure AI Search in production"
+  "Fine-tuning": "LoRA/QLoRA LLaMA 3.1, vLLM inference -35% latency"
+
+rates:
+  target_hourly_usd: 60
+  min_project_usd: 1500
+  hours_per_week: 20
+
+sources:
+  keywords: ["AI agent", "LLM", "RAG", "LangGraph", "chatbot", "automation", "MCP"]
+  remote_only: true
+  rss_feeds:
+    - "https://remoteok.com/remote-jobs.rss"
+    - "https://weworkremotely.com/categories/remote-programming-jobs.rss"
+  hackernews: true
+  github_bounty: true
+
+# LLM providers. Primary = first working; fallback = next. Keys via env override.
+llm:
+  primary: "gemini"
+  gemini_api_key: ""      # or GEMINI_API_KEY
+  gemini_model: "gemini-flash-latest"
+  openrouter_api_key: ""  # or OPENROUTER_API_KEY
+  openrouter_model: "google/gemma-4-31b-it:free"
+
+# Client/company research enrichment.
+research:
+  tavily_api_key: ""     # or TAVILY_API_KEY
+
+memory:
+  db_path: "./data/radar.db"

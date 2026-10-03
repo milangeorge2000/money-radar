@@ -1,0 +1,81 @@
+MILAN VARGHESE GEORGE
++91 7736067870 Kerala, India milanvg6@gmail.com
+SKILLS
+AI/ML & Agentic AI: Python, LLMs, Agentic AI, Multi-Agent Systems, Agent Orchestration, Tool Calling, Context Engineering,
+Agent Memory, LangGraph, LangChain, MCP , A2A, Amazon Bedrock AgentCore, OpenAI, Anthropic, HuggingFace
+RAG & Knowledge Systems: RAG, Multimodal RAG, Hybrid Retrieval, GraphRAG, Vector Search, Pinecone, Qdrant, Weaviate,
+Azure AI Search, Morphik, Context Compression, Passage Ranking, Retrieval Optimization
+AI Evaluation & LLMOps: LLM Evaluation, DeepEval, Ragas, G-Eval, LLM-as-a-Judge, Benchmarking, Continuous Evaluation,
+LangSmith, LangFuse, Telemetry, Tracing, Preference Data, RLHF/RLAIF , DPO
+Backend & Distributed Systems: FastAPI, PostgreSQL, Redis, Docker, Celery, Airflow, Git, GitHub Actions, CI/CD, Asynchronous
+Execution, Distributed Workflows
+Cloud, MLOps & Deployment: AWS, Amazon SageMaker, Kubernetes, vLLM, GCP Vertex AI, Isolated Sandbox Execution,
+MLflow, Model Serving, Observability
+EDUCATION
+Master of Data Science 2023 – 2024
+University of Glasgow
+Bachelor of Computer Science & Engineering 2018 – 2022
+APJ Abdul Kalam Technological University
+EXPERIENCE
+AI Engineer Feb 2026 – Present
+Johnson & Johnson Onsite — Hyderabad, India
+• Architected and delivered a plugin-composable AI Coscientist platform , integrating 17 MCP microservices and 15 scien-
+tific research workflows across immunology, oncology, chemistry, and safety sciences; reduced complex biomedical analysis
+turnaround from days to 5–16 minutes and accelerated researcher workflows by up to 90% through autonomous retrieval,
+multi-step reasoning, tool orchestration, and evidence-grounded report generation.
+• Led the architecture of a defense-in-depth AI governance platform integrating Keycloak authentication, fine-grained RBAC,
+fail-closed data-authority controls, transitive data-classification enforcement, audit-ready authorization, resource budgets, and
+sandbox isolation, enabling secure and compliant enterprise-scale execution of biomedical AI agents and tool workflows.
+• Developed a production-grade LLM evaluation and observability framework combining rubric-based evaluation, code-based
+and G-Eval/DAG-based LLM-as-a-Judge evaluators, expert-aligned calibration, and LangFuse trace-to-evaluation feedback
+loops; enabled validated evaluation gates for agent outputs and continuous improvement of reliability, factuality, consistency,
+and traceability.
+• Architected a multi-agent regulatory authoring platform using Amazon Bedrock AgentCore, with a primary Regulatory Doc-
+ument Authoring Agent collaborating through A2A with specialized SQL/Data Retrieval, Evidence Retrieval, Regulatory Intel-
+ligence, and Document Verification Agents; automated evidence-grounded document generation, provenance tracking, cross-
+document consistency validation, and pre-submission quality checks for FDA regulatory packages, reducing manual authoring
+and review effort while minimizing documentation errors.
+AI Engineer Apr 2025 – Present
+T errabase Remote
+• Architected a production-grade Analytics and SQL Agent enabling natural-language-to-SQL and chart generation, multimodal
+CSV/Excel analytics, Snowflake orchestration, dynamic visualization, and automated reporting; implemented ReAct/ReWOO
+reasoning, version-controlled refinements, isolated E2B execution, Celery-based asynchronous parallelism, and Airflow schedul-
+ing.
+• Designed a modular Deep Research Agent with a planner-driven multi-agent architecture spanning retrieval, analytics, rea-
+soning, and synthesis; implemented context engineering and MCP-based tool/data-source integration for scalable multi-step
+research workflows.
+• Built a multi-tier agent memory architecture using Redis for short-term state, PostgreSQL for persistent state, and Zep/Graph
+Memory for semantic-relational memory, with LangMem-based memory writing for summarization, distillation, and long-horizon
+cross-session recall.
+• Implemented enterprise RAG pipelines across structured and unstructured data, combining SQL/metrics with documents,
+PDFs, and logs using Azure AI Search and Morphik; applied benchmark-driven evaluation loops to improve retrieval quality,
+contextual fidelity, reasoning accuracy, and end-to-end latency.
+• Established end-to-end LLMOps observability and evaluation using LangSmith and LangFuse, connecting traces to benchmark-
+driven feedback loops for prompt refinement, agent policy tuning, and preference-data curation, with continuous monitoring of
+relevance, factuality, stability, and latency.
+AI Engineer Jan 2024 – Feb 2025
+POMO Robotics Glasgow, UK
+• Built advanced RAG and Multimodal RAG pipelines using LangChain, LangGraph, Pinecone, and Qdrant, improving diagnostic
+retrieval accuracy by 35%.
+1
+• Engineered context-aware LLM prompting systems using Jinja2 and Pydantic-based scaffolding, applying context compression,
+relevance filtering, and context-rot mitigation to improve accuracy by 22% while reducing token usage by 30%.
+• Fine-tuned LLaMA 3.1 8B, CLIP , and BGE using LoRA, QLoRA, and PEFT; optimized inference with vLLM, speculative decod-
+ing, and prompt caching, achieving 32% model compression and 35% lower latency.
+• Built AI reliability, safety, evaluation, and monitoring systems using Guardrails AI, LangSmith, Ragas, Giskard, and Weights &
+Biases, increasing robustness by 40% and reducing failure rates by 18%.
+AI Engineer Jun 2022 – Aug 2023
+Open Leaves Kochi, India
+• Designed event-driven ML ingestion pipelines using AWS SQS and SNS to orchestrate data arrival, preprocessing triggers, and
+automated retraining across batch and streaming workflows.
+• Architected automated end-to-end ML pipelines covering preprocessing, feature engineering, model training, and testing, de-
+ployed with Docker and Kubernetes and managed with MLflow for experiment tracking and model versioning.
+• Developed YOLOv5 and SSD-based object detection systems with optimized ONNX Runtime and TensorRT inference, achieving
+40% faster inference.
+• Built GAN/VAE-based synthetic-data pipelines for domain adaptation, increasing data diversity by 35% and improving general-
+ization accuracy by 15%.
+Intern Dec 2021 – Apr 2022
+Indian Space Research Organisation (ISRO) Thiruvananthapuram
+• Co-authored a research paper on atmospheric temperature and humidity retrieval using deep learning, published in the Journal
+of Atmospheric and Solar-Terrestrial Physics.
+2
